@@ -24,9 +24,14 @@ elif argv[1] != 'e':
 output = ""
 
 for letter in message:
+  if not letter.isalpha():
+    output = output + letter
+    continue
+  
   letter_ord = ord(letter)
   
-  if letter_ord == ord(' ') or not letter.isalpha():
+  if letter_ord == ord(' '):
+    output = output + ' '
     continue
    
   letter_ord -= ord('A')
