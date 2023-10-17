@@ -26,7 +26,7 @@ output = ""
 for letter in message:
   letter_ord = ord(letter)
   
-  if letter_ord == ord(' '):
+  if letter_ord == ord(' ') or not letter.isalpha():
     continue
    
   letter_ord -= ord('A')
